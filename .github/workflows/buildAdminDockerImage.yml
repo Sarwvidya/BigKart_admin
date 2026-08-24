@@ -40,5 +40,5 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/bigkart_customer:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/bigkart_customer:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/bigkart_admin:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/bigkart_admin:${{ github.sha }}
