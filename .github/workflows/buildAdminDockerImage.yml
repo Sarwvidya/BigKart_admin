@@ -51,3 +51,5 @@ jobs:
           tags: |
               ${{ secrets.DOCKERHUB_USERNAME }}/bigkart_admin:${{ inputs.tag || github.ref_name }}
               ${{ secrets.DOCKERHUB_USERNAME }}/bigkart_admin:latest
+          labels: |
+            org.opencontainers.image.version=${{ inputs.tag || github.ref_name }}
