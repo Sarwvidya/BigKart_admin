@@ -48,4 +48,6 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/bigkart_admin:${{ github.event.inputs.tag || github.ref_name }}
+          tags: |
+              ${{ secrets.DOCKERHUB_USERNAME }}/bigkart_admin:${{ inputs.tag || github.ref_name }}
+              ${{ secrets.DOCKERHUB_USERNAME }}/bigkart_admin:latest
