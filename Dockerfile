@@ -2,8 +2,8 @@ FROM eclipse-temurin:17-jre
 
 WORKDIR /app
 
-COPY target/bigkart-0.0.1-SNAPSHOT.jar app.jar
+COPY target/bigkart-0.0.1-SNAPSHOT.war app.war
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.war"]
