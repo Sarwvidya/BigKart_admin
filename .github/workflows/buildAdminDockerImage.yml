@@ -2,7 +2,8 @@ name: Build and Push Docker Image
 
 on:
   push:
-
+    tags:
+      - 'v*'
 
 jobs:
   build-and-push:
@@ -40,5 +41,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/bigkart_admin:${{ github.sha }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/bigkart_admin:${{ github.ref_name }}
